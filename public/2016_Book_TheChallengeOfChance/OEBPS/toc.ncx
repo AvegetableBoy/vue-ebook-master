@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="urn:isbn:978-3-319-26300-7"/>
+  </head>
+  <docTitle><text>THE CHALLENGE OF CHANCE</text></docTitle>
+  <docAuthor><text>Klaas Landsman, Ellen van Wolde</text></docAuthor>
+  <navMap>
+    <navPoint id="navpoint-1" playOrder="1">
+      <navLabel><text>Cover</text></navLabel>
+      <content src="html/Cover.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-2" playOrder="2">
+      <navLabel><text>Front Matter</text></navLabel>
+      <content src="html/340096_1_En_BookFrontmatter_OnlinePDF.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-3" playOrder="3">
+      <navLabel><text>Introduction</text></navLabel>
+      <content src="html/340096_1_En_1_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-4" playOrder="4">
+      <navLabel><text>Conceptual and Historical Reflections on Chance (and Related Concepts)</text></navLabel>
+      <content src="html/340096_1_En_2_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-5" playOrder="5">
+      <navLabel><text>The Mathematical Foundations of Randomness</text></navLabel>
+      <content src="html/340096_1_En_3_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-6" playOrder="6">
+      <navLabel><text>Randomness and the Madness of Crowds</text></navLabel>
+      <content src="html/340096_1_En_4_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-7" playOrder="7">
+      <navLabel><text>Randomness and the Games of Science</text></navLabel>
+      <content src="html/340096_1_En_5_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-8" playOrder="8">
+      <navLabel><text>The Fine-Tuning Argument: Exploring the Improbability of Our Existence</text></navLabel>
+      <content src="html/340096_1_En_6_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-9" playOrder="9">
+      <navLabel><text>Chance in the Hebrew Bible: Views in Job and Genesis 1</text></navLabel>
+      <content src="html/340096_1_En_7_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-10" playOrder="10">
+      <navLabel><text>Happiness and Invulnerability from Chance: Western and Eastern Perspectives</text></navLabel>
+      <content src="html/340096_1_En_8_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-11" playOrder="11">
+      <navLabel><text>The Experience of Coincidence: An Integrated Psychological and Neurocognitive Perspective</text></navLabel>
+      <content src="html/340096_1_En_9_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-12" playOrder="12">
+      <navLabel><text>When Chance Strikes: Random Mutational Events as a Cause of Birth Defects and Cancer</text></navLabel>
+      <content src="html/340096_1_En_10_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-13" playOrder="13">
+      <navLabel><text>Chance, Variation and the Nature of Causality in Ecological Communities</text></navLabel>
+      <content src="html/340096_1_En_11_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-14" playOrder="14">
+      <navLabel><text>The Size of History: Coincidence, Counterfactuality and Questions of Scale in History</text></navLabel>
+      <content src="html/340096_1_En_12_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-15" playOrder="15">
+      <navLabel><text>Accidental Harm Under (Roman) Civil Law</text></navLabel>
+      <content src="html/340096_1_En_13_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-16" playOrder="16">
+      <navLabel><text>Taming Chaos. Chance and Variability in the Language Sciences</text></navLabel>
+      <content src="html/340096_1_En_14_Chapter.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-17" playOrder="17">
+      <navLabel><text>Back Matter</text></navLabel>
+      <content src="html/340096_1_En_BookBackmatter_OnlinePDF.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>
