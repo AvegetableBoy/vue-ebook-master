@@ -91,9 +91,9 @@ import Epub from 'epubjs'
 
 global.ePub = Epub
 
-const APPID = '5b4da68b'
-const API_SECRET = '48487e25de82a2c167eccda30f7a3c70'
-const API_KEY = '7154170219e3e4426025afef812d070e'
+const APPID = 'da3049f6'
+const API_SECRET = 'ODk2MTQwMDllOGRkNWU3ODEzZTMzMThh'
+const API_KEY = '50b7e0737c319debf58acc765c62055a'
 let isChrome = navigator.userAgent.toLowerCase().match(/chrome/)
 let notSupportTip = isChrome ? '您的浏览器暂时不支持体验功能，请升级您的浏览器' : '您现在使用的浏览器暂时不支持体验功能，<br />推荐使用谷歌浏览器Chrome'
 
@@ -252,11 +252,11 @@ class Experience {
       }
     }
     this.websocket.onerror = (e) => {
-      // console.log(e)
-      //console.log(e.data)
+      console.log(e)
+      console.log(e.data)
     }
     this.websocket.onclose = (e) => {
-      //console.log(e)
+      console.log(e)
     }
   }
 
@@ -303,6 +303,8 @@ class Experience {
     }
   }
 
+
+  //播放
   playSource() {
     let bufferLength = 0
     let dataLength = this.audioDatas.length
@@ -469,7 +471,6 @@ export default {
       ifShowContent: true,
       playingIndex: -1,
       paragraph: null,
-
       currentSectionIndex: null,
       currentSectionTotal: null,
       section: null,
@@ -486,13 +487,13 @@ export default {
   methods: {
     // 在线语音合成
     createVoice(text) {
-
+      console.log('在线语音合成', text)
       if (text !== experience.text) {
         experience.setConfig({
           text
         })
       }
-      // console.log(experience)
+      console.log(experience)
       if (experience.playState === 'play') {
         experience.audioPause()
         this.resetPlay()
@@ -501,28 +502,7 @@ export default {
         this.isPlaying = true
         this.playStatus = 1
       }
-      // const xmlhttp = new XMLHttpRequest()
-      // // 创建HTTP请求，同步接收结果
-      // xmlhttp.open('GET', `${process.env.VUE_APP_VOICE_URL}/voice?text=${text}&lang=${this.lang.toLowerCase()}`, false)
-      // // 发送请求
-      // xmlhttp.send()
-      // // 获取响应内容
-      // const xmlDoc = xmlhttp.responseText
-      // if (xmlDoc) {
-      //   // 解析响应内容
-      //   const json = JSON.parse(xmlDoc)
-      //   if (json.path) {
-      //     // path为语音合成生成的MP3文件下载路径，将该路径赋值audio.src
-      //     // audio控件会自动加载音频文件
-      //     this.$refs.audio.src = json.path
-      //     // 自动播放MP3
-      //     this.continuePlay()
-      //   } else {
-      //     this.showToast('播放失败，未生成链接')
-      //   }
-      // } else {
-      //   this.showToast('播放失败')
-      // }
+
     },
     // 切换播放状态，如果处于播放状态则暂停，如果处于暂停状态，则播放
     // 注意状态0和状态2是不通的
@@ -531,18 +511,15 @@ export default {
     togglePlay() {
       if (!this.isPlaying) {
         if (this.playStatus === 0) {
-
           this.play()
+
         } else if (this.playStatus === 2) {
-
+          console.log('2')
           this.continuePlay()
-
         }
       } else {
-
+        console.log('1')
         this.pausePlay()
-
-
       }
     },
     // 生成语音合成的文本信息
@@ -595,25 +572,29 @@ export default {
     // 从头开始语音合成并播放
     play() {
       this.createVoice(this.paragraph)
-
     },
     // 继续播放
     continuePlay() {
-      this.$refs.audio.play().then(() => {
-        // 显示播放动画
-        this.$refs.speakPlaying[0].startAnimation()
-        this.isPlaying = true
-        this.playStatus = 1
-      })
+      // this.$refs.audio.play().then(() => {  })
+      // 显示播放动画
+      this.$refs.speakPlaying[0].startAnimation()
+
+
+      this.isPlaying = true
+      this.playStatus = 1
+      experience.audioPlay()
+      experience.setBtnState('play')
+
+
     },
     // 暂停播放
     pausePlay() {
-
       this.$refs.audio.pause()
       // 暂停播放动画
       this.$refs.speakPlaying[0].stopAnimation()
       this.isPlaying = false
       this.playStatus = 2
+      experience.audioPause('pause')
     },
     // 当播放结束时，刷新播放信息
     onAudioEnded() {
@@ -624,9 +605,7 @@ export default {
     },
     // 当播放进行时，刷新播放信息
     onTimeUpdate() {
-
       this.currentPlayingTime = this.$refs.audio.currentTime
-      // console.log(this.$refs.audio.currentTime)
       const percent = Math.floor((this.currentPlayingTime / this.totalPlayingTime) * 100)
       this.$refs.speakWindow.refreshProgress(percent)
     },
