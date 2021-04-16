@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   html.style.fontSize = fontSize + 'px'
 })
 
+
+document.title = '我爱读书'
 </script>
 <style>
 #app {
