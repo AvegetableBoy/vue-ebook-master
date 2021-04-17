@@ -11,19 +11,20 @@ const flatListData = require('./src/mock/bookFlatList')
 
 module.exports = {
 
+
   lintOnSave: false,
   publicPath: process.env.NODE_ENV === 'production'
     ? './'
     : '/',
+
   devServer: {
-    // public: 'http://172.25.29.205:8081',
+    public: 'http://172.25.29.205:8081',
     before(app) {
       mock(app, '/book/home', homeData)
       mock(app, '/book/shelf', shelfData)
       mock(app, '/book/list', listData)
       mock(app, '/book/flat-list', flatListData)
     }
-
 
 
   },
